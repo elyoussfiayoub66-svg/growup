@@ -10,3 +10,4 @@ venv/
 
 # Environment files
 *.env
+backend/db.sqlite3  # optional to be more explicit
