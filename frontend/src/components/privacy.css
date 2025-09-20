@@ -1,0 +1,230 @@
+/* ====== Global ====== */
+.policies-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f9fafc;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1e293b;
+}
+
+/* ====== Sidebar ====== */
+.policies-sidebar {
+  width: 280px;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin:3% 3%;
+  border-radius:15px;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.policies-sidebar h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #6c0fb0;
+}
+
+.policies-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight:200;
+}
+
+.policies-sidebar li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  color: #475569;
+}
+
+.policies-sidebar li:hover {
+  background: rgba(108, 15, 176, 0.08);
+  color: #6c0fb0;
+}
+
+.policies-sidebar li.active {
+  background: linear-gradient(135deg, #6c0fb0, #9d4edd);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(108, 15, 176, 0.25);
+}
+
+/* ====== Content ====== */
+.policies-content {
+  display: flex;
+  flex-direction: column; /* force vertical stacking */
+  align-items: flex-start; /* align text to the left */
+  width:70%;
+}
+
+.policies-content h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 5% 0;
+  color: #111827;
+  margin-bottom: 0.5rem; /* space below title */
+}
+
+.policies-content .effective {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem; /* space below effective date */
+  font-style: italic;
+  background: rgba(108, 15, 176, 0.08);
+  border-radius:30px;
+  padding:4px 16px;
+}
+
+.policies-content .body-text p {
+  margin-bottom: 1rem; /* spacing between body paragraphs */
+  line-height: 1.6;
+  color: #333;
+}
+
+
+/* Body content */
+.body-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Paragraphs */
+.body-text p {
+  margin-bottom: 1.2rem;
+}
+
+/* Section headings */
+.body-text h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #6A0DAD;
+  border-left: 4px solid #6A0DAD;
+  padding-left: 0.6rem;
+}
+
+.body-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #444;
+}
+
+/* Lists */
+.body-text ul {
+  margin: 1rem 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.body-text li {
+  margin-bottom: 0.5rem;
+}
+
+/* Bold text */
+.body-text strong {
+  font-weight: 700;
+  color: #111;
+}
+
+/* Links */
+.body-text a {
+  color: #6A0DAD;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.body-text a:hover {
+  color: #4B0082;
+}
+
+
+/* === Subprocessors Table Styling === */
+.policies-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.policies-content table thead {
+  background: #6A0DAD;
+  color: #fff;
+  text-align: left;
+}
+
+.policies-content table th,
+.policies-content table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.policies-content table th {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.policies-content table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.policies-content table tbody tr:hover {
+  background-color: #f3f4f6;
+  transition: background 0.2s ease;
+}
+
+.policies-content table td {
+  color: #374151;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .policies-content table,
+  .policies-content table thead,
+  .policies-content table tbody,
+  .policies-content table th,
+  .policies-content table td,
+  .policies-content table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .policies-content table thead {
+    display: none;
+  }
+
+  .policies-content table tr {
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 0.8rem;
+  }
+
+  .policies-content table td {
+    border: none;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+
+  .policies-content table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #11121a;
+  }
+}
