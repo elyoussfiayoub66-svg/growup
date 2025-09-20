@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+
+# React
+frontend/node_modules/
+frontend/build/
+
+# Python virtual environment
+venv/
+
+# Environment files
+*.env
+backend/db.sqlite3  # optional to be more explicit
